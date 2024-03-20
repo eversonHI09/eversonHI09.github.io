@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Encriptardor Alura</title>
+
+    <!-- Icono de la pestaña del navegador -->
+    <link rel="shortcut icon" href="imagenes/icons8-código-qr-32.png" type="image/x-icon">
+
+    <!-- Enlaces a las hojas de estilos -->
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Encabezado de la página -->
+    <header>
+        <div class="heard_container">
+            <img src="imagenes/Logo.png" alt="logo de alura" class="alura">
+            <h1 class="encabezado">Encriptador Alura</h1>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="seccion1">
+            <!-- Área de texto para ingresar contenido -->
+            <textarea id="ingresoTexto" class="area" placeholder="Ingrese la texto aqui"></textarea>
+
+            <!-- Selección del modo de encriptación -->
+            <div class="seleccion">
+                <form action="#">
+                    <label for="language">Selecciona modo de encriptar:</label>
+                    <select name="language" id="language">
+                        <option value="javascript">codigo omega</option>
+                        <option value="python">codigo beta</option>
+                        <option value="java">codigo alfa</option>
+                    </select>
+                </form>
+            </div>
+
+            <!-- Contenedor de botones -->
+            <div class="contenedor-botones">
+                <button>
+                    <!-- Icono y texto del botón de encriptar -->
+                    <i class="icon botonEncriptar"></i>
+                    <span class="btn-encriptar">Encriptar</span>
+                </button> 
+
+                <!-- Sección para bloquear la página mientras carga -->
+                <div id="overlay" class="overlay"></div>
+            </div>
+
+            <!-- Pop-up para mostrar resultados -->
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <!-- Contenido del pop-up -->
+                    <section class="right" id="rigth">
+                        <textarea id="textoFinal" class="textoFinal" placeholder="Ningún mensaje fue encontrado"></textarea>
+                        <p id="textoInfo" class="info"></p>
+                    </section>
+
+                    <!-- Botones dentro del pop-up -->
+                    <div class="botones">
+                        <button class="original" id="original">desencriptar</button>
+                        <button class="copiar" id="copiar">copiar</button>
+                    </div>
+                    <button id="btnRetorno">Volver</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <section>
+            <!-- Derechos de autor -->
+            <p class="derechos"> &copy Todos los derechos reservados.</p>
+
+            <!-- Enlaces a redes sociales -->
+            <div class="redesUno">
+                <a href="https://www.linkedin.com/in/everson-huam%C3%A1n-infanz%C3%B3n-043531b8/"><img src="imagenes/icons8-linkedin-96.png" alt="logo-linkedin" class="enlace"></a> 
+            </div>
+            <div class="redesDos">
+                <a href="https://github.com/eversonHI09"><img src="imagenes/icons8-github-48.png" alt="logo-github" class="enlace"></a> 
+            </div>
+        </section>
+    </footer>
+
+    <!-- Archivo JavaScript para funcionalidad interactiva -->
+    <script src="script.js"></script>
+</body>
+</html>

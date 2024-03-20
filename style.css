@@ -1,0 +1,343 @@
+/* Establece un margen de 10px para todos los elementos */
+* {
+    margin: 10px;
+    padding: 0; /* Establece el relleno a 0 */
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+    background-color: #E9ECF8; /* Establece el color de fondo */
+    font-family: 'Poppins', sans-serif; /* Define el tipo de fuente */
+}
+
+/* Estilos para el encabezado */
+.encabezado {
+    font-size: 50px; /* Establece el tamaño de fuente */
+    text-align: center; /* Centra el texto */
+    margin-top: auto; /* Centra el encabezado verticalmente */
+    background-color: white; /* Establece el color de fondo */
+}
+
+/* Estilos para la sección principal */
+main {
+    width: 100%; /* Establece el ancho al 100% */
+    height: 90%; /* Establece la altura al 90% */
+    display: flex; /* Usa el modelo de caja flexible para organizar los elementos secundarios */
+    justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
+}
+
+/* Estilos para la primera sección */
+.seccion1 {
+    width: 100%; /* Establece el ancho al 100% */
+    margin: auto; /* Centra horizontalmente */
+    border-radius: 50px; /* Establece el radio de borde */
+}
+
+/* Estilos para el área de texto */
+.area {
+    width: 70%; /* Establece el ancho al 70% */
+    height: 300px; /* Establece la altura a 300px */
+    display: block; /* Muestra el elemento como bloque */
+    margin: auto; /* Centra horizontalmente */
+    margin-top: 20px; /* Establece el margen superior */
+    padding: 10px 25px; /* Establece el relleno */
+    resize: none; /* Deshabilita la redimensión */
+    font-size: 25px; /* Establece el tamaño de fuente */
+    border: none; /* Elimina el borde */
+    color: black; /* Establece el color del texto */
+    outline-color: transparent; /* Establece el color del contorno */
+    background-color: white; /* Establece el color de fondo */
+    font-style: italic; /* Establece el estilo de fuente */
+}
+
+/* Estilos para la selección */
+.seleccion {
+    display: flex; /* Usa el modelo de caja flexible para organizar los elementos secundarios */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    width: 70%; /* Establece el ancho al 70% */
+    margin: auto; /* Centra horizontalmente */
+    padding: 10px 25px; /* Establece el relleno */
+}
+
+/* Estilos para el elemento select */
+select {
+    border: none; /* Elimina el borde */
+    padding: 10px 20px; /* Establece el relleno */
+    border-radius: 5px; /* Establece el radio de borde */
+    border: 30%; /* Establece el grosor del borde */
+    background-color: white; /* Establece el color de fondo */
+}
+
+/* Estilos para el enfoque del elemento select */
+select:focus {
+    outline: none; /* Elimina el contorno */
+    color: black; /* Establece el color del texto */
+}
+
+/* Estilos para el contenedor de botones */
+.contenedor-botones {
+    text-align: center; /* Centra horizontalmente */
+    margin-top: 30px; /* Establece el margen superior */
+}
+
+/* Estilos para los botones */
+button {
+    width: 25%; /* Establece el ancho al 25% */
+    height: 40px; /* Establece la altura a 40px */
+    margin: 30px; /* Establece los márgenes */
+    border: 30%; /* Establece el grosor del borde */
+    font-size: large; /* Establece el tamaño de fuente */
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center; /* Centra horizontalmente */
+}
+
+/* Estilos para el texto de derechos de autor */
+.derechos {
+    font-style: italic; /* Establece el estilo de fuente */
+}
+
+/* Estilos para el overlay */
+.overlay {
+    display: none; /* Oculta el elemento */
+    position: fixed; /* Establece la posición fija */
+    top: 0; /* Establece la posición superior */
+    left: 0; /* Establece la posición izquierda */
+    width: 100%; /* Establece el ancho al 100% */
+    height: 100%; /* Establece la altura al 100% */
+    background-color: rgba(0, 0, 0, 0.5); /* Establece el color de fondo con opacidad */
+    z-index: 9999; /* Establece el índice z */
+    text-align: center; /* Centra horizontalmente */
+}
+
+/* Animaciones del botón de carga */
+.button-loader {
+    position: relative; /* Establece la posición relativa */
+    text-align: center; /* Centra horizontalmente */
+}
+
+.button-loader:before,
+.button-loader:after {
+    width: 40px; /* Establece el ancho a 40px */
+    height: 40px; /* Establece la altura a 40px */
+    border-radius: 40px; /* Establece el radio de borde */
+    background: blue; /* Establece el color de fondo */
+    content: ''; /* Establece el contenido */
+    position: absolute; /* Establece la posición absoluta */
+}
+
+.button-loader:before {
+    background: #9b59b6; /* Establece el color de fondo */
+    animation: button-loader_before 1.5s infinite ease-in-out; /* Establece la animación */
+}
+
+.button-loader:after {
+    background: #2ecc71; /* Establece el color de fondo */
+    left: 22px; /* Establece la posición izquierda */
+    animation: button-loader_after 1.5s infinite ease-in-out; /* Establece la animación */
+}
+
+@keyframes button-loader_before {
+    0% {
+        transform: translateX(0px) rotate(0deg)
+    }
+    50% {
+        transform: translateX(50px) scale(1.2) rotate(260deg);
+        background: #2ecc71;
+        border-radius: 0px;
+    }
+    100% {
+        transform: translateX(0px) rotate(0deg)
+    }
+}
+
+@keyframes button-loader_after {
+    0% {
+        transform: translateX(0px)
+    }
+    50% {
+        transform: translateX(-50px) scale(1.2) rotate(-260deg);
+        background: #9b59b6;
+        border-radius: 0px;
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+/* Estilos para el pop-up */
+.popup {
+    display: none; /* Oculta el elemento */
+    position: fixed; /* Establece la posición fija */
+    z-index: 1000; /* Establece el índice z */
+    left: 0; /* Establece la posición izquierda */
+    top: 0; /* Establece la posición superior */
+    width: 100%; /* Establece el ancho al 100% */
+    height: 100%; /* Establece la altura al 100% */
+    overflow: auto; /* Habilita el desplazamiento */
+    background-color: rgba(0, 0, 0, 0.5); /* Establece el color de fondo con opacidad */
+    font-size: 25px; /* Establece el tamaño de fuente */
+}
+
+/* Estilos para el contenido del pop-up */
+.popup-content {
+    background-color: #fefefe; /* Establece el color de fondo */
+    margin: 10% auto; /* Ajusta el margen superior e inferior para centrarlo verticalmente */
+    padding: 20px; /* Establece el relleno */
+    border: 1px solid #888; /* Establece el borde */
+    width: 100%; /* Establece el ancho al 100% */
+    height: auto; /* Establece la altura automática */
+    max-width: 1200px; /* Establece el ancho máximo */
+    text-align: center; /* Centra horizontalmente */
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+    color: #aaa; /* Establece el color del texto */
+    float: right; /* Alinea a la derecha */
+    font-size: 28px; /* Establece el tamaño de fuente */
+    font-weight: bold; /* Establece el peso de la fuente */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Establece el color del texto al pasar el mouse o enfocar */
+    text-decoration: none; /* Elimina la decoración del texto */
+    cursor: pointer; /* Establece el cursor a pointer */
+}
+
+/* Estilos para el texto final */
+.textoFinal {
+    width: 100%; /* Establece el ancho al 100% */
+    font-size: 24px; /* Establece el tamaño de fuente */
+    color: black; /* Establece el color del texto */
+    border: none; /* Elimina el borde */
+    outline: none; /* Elimina el contorno */
+    text-align: center; /* Centra horizontalmente */
+    overflow: hidden; /* Oculta el desbordamiento */
+    resize: none; /* Deshabilita la redimensión */
+    pointer-events: none; /* Deshabilita los eventos de puntero */
+    font-family: 'Space Mono', monospace; /* Establece la fuente */
+}
+
+/* Estilos para el marcador de posición del texto final */
+.textoFinal::placeholder {
+    color: var(--color-greyDark); /* Establece el color del marcador de posición */
+}
+
+/* Estilos para la sección de ajuste */
+.ajuste {
+    justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
+}
+
+/* Estilos para ajustar */
+.ajustar {
+    height: auto; /* Establece la altura automática */
+    min-height: calc(100% - 67px - 32px); /* Establece la altura mínima */
+    pointer-events: all; /* Habilita todos los eventos de puntero */
+    text-align: left; /* Alinea el texto a la izquierda */
+    overflow: auto; /* Habilita el desplazamiento */
+}
+
+/* Estilos para la sección derecha */
+.right {
+    align-items: center; /* Alinea los elementos al centro */
+    width: auto; /* Establece el ancho automático */
+    height: auto; /* Establece la altura automática */
+    background: white; /* Establece el color de fondo */
+    border-radius: 32px; /* Establece el radio de borde */
+    display: flex; /* Usa el modelo de caja flexible para organizar los elementos secundarios */
+    flex-direction: column; /* Establece la dirección de flexión a columna */
+    justify-content: center; /* Alinea los elementos al centro */
+    padding: 16px; /* Establece el relleno */
+    gap: 32px; /* Establece el espacio entre elementos secundarios */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); /* Establece la sombra */
+}
+
+/* Estilos para los botones */
+.botones {
+    display: flex; /* Usa el modelo de caja flexible para organizar los elementos secundarios */
+    justify-content: space-evenly; /* Distribuye uniformemente los elementos secundarios */
+    padding: 0.8rem; /* Establece el relleno */
+    flex-wrap: wrap; /* Permite el ajuste de línea */
+    gap: 0.8rem; /* Establece el espacio entre elementos secundarios */
+    text-align: center; /* Centra horizontalmente */
+}
+
+/* Estilos para los botones dentro de la sección de botones */
+.botones button {
+    width: 25%; /* Establece el ancho al 25% */
+    height: 40px; /* Establece la altura a 40px */
+    margin: 30px; /* Establece los márgenes */
+    border: 30%; /* Establece el grosor del borde */
+    font-size: large; /* Establece el tamaño de fuente */
+    border-radius: 10px; /* Establece el radio de borde */
+    outline: 1px solid var(--color-blue); /* Establece el contorno */
+}
+
+/* Estilos para el botón de retorno */
+#btnRetorno {
+    width: 25%; /* Establece el ancho al 25% */
+    height: 40px; /* Establece la altura a 40px */
+    margin: 30px; /* Establece los márgenes */
+    border: 30%; /* Establece el grosor del borde */
+    font-size: large; /* Establece el tamaño de fuente */
+    border-radius: 10px; /* Establece el radio de borde */
+}
+
+/* Estilos para el botón presionado */
+button {
+    padding: 10px 20px; /* Establece el relleno */
+    font-size: 16px; /* Establece el tamaño de fuente */
+    background-color: #007bff; /* Establece el color de fondo */
+    color: #fff; /* Establece el color del texto */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Establece el radio de borde */
+    cursor: pointer; /* Establece el cursor a pointer */
+}
+
+/* Media queries */
+
+/* Estilos para pantallas con un ancho máximo de 840px */
+@media screen and (max-width: 840px) {
+    .seecion1, .area, .right {
+        width: auto; /* Establece el ancho automático */
+        height: 300px; /* Establece la altura a 300px */
+    }
+
+    .popup {
+        width: 100%; /* Establece el ancho al 100% */
+    }
+
+    button {
+        width: 80%; /* Establece el ancho al 80% */
+    }
+
+    .botones button {
+        font-size: medium; /* Establece el tamaño de fuente a medium */
+    }
+
+    .seleccion {
+        width: 100%; /* Establece el ancho al 100% */
+    }
+}
+
+
+
+/* Estilos para pantallas con un ancho máximo de 440px */
+@media screen and (max-width: 440px) {
+    .seecion1, .area, .right {
+        width: auto; /* Establece el ancho automático */
+        height: 300px; /* Establece la altura a 300px */
+    }
+}
+
+/* Estilos para pantallas con un ancho máximo de 230px */
+@media screen and (max-width: 230px) {
+    .seecion1, .area, .right {
+        width: auto; /* Establece el ancho automático */
+        height: 300px; /* Establece la altura a 300px */
+    }
+}
