@@ -16,6 +16,60 @@ const remplace = (newvalue) => {
 	
 }
 /**/ 
+// Función para validar el mensaje y mostrar advertencia si no son letras minúsculas sin acentos y sin números
+function validarMensaje(mensaje) {
+    // Verificar si el mensaje contiene solo letras minúsculas sin acentos y sin números
+    let patron = /^[a-z\s]+$/;
+    if (!patron.test(mensaje)) {
+        // Si el mensaje no contiene solo letras minúsculas sin acentos y sin números, mostrar mensaje de advertencia
+        document.getElementById('popup').style.display = 'block';
+        return false;
+    }
+    return true;
+}
+
+
+
+
+
+
+
+
+button.addEventListener("click", () => {
+    // Disable the button to prevent multiple clicks
+    button.disabled = true;
+    document.getElementById('overlay').style.display = 'block';
+
+    // Add the loading animation CSS class
+    button.classList.add('button-loader');
+
+    // Obtener el texto ingresado y validar
+    const texto = textoInicial.value.toLowerCase();
+    const esValido = validarMensaje(texto);
+
+    // Si el mensaje es válido, realizar las operaciones de encriptación o desencriptación
+    if (esValido) {
+        if (texto != "") {
+            // Código de encriptación o desencriptación...
+        } else {
+            alert("Ingrese texto para encriptar");
+        }
+    }
+
+    // Resto del código...
+});
+
+// Resto del código...
+
+
+
+
+
+
+
+
+
+
 
 button.addEventListener("click", () => {
   // Disable the button to prevent multiple clicks
@@ -73,7 +127,10 @@ desencriptar.addEventListener('mousedown', () => {
 		alert("Ingrese texto a desencriptar");
 	};
 
+	
+
 });
+
 
 // Ocultar el pop-up cuando se libera el botón
 desencriptar.addEventListener('mouseup', function() {
